@@ -4,6 +4,7 @@ import React, {useEffect} from 'react';
 import ContainerCard from './ContainerCard.jsx';
 import Footer from './footer.jsx';
 import Navbar from './Navbar.jsx';
+import Locations from "./Locations.jsx";
 import Swiper, { Navigation, Pagination } from 'swiper';
 
 // configure Swiper to use modules
@@ -12,6 +13,35 @@ Swiper.use([Navigation, Pagination]);
 
 
 function App(){
+    useEffect(()=>{
+        var swiper3 = new Swiper('.swiper3', {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            // init: false,
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+              0:{
+                slidesPerView: 1,
+                spaceBetween: 30,
+              },
+              640: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+              },
+            }
+          });
+        })
     return(
     <div>
         <div className="mainContainer">
@@ -30,6 +60,7 @@ function App(){
                 </ContainerCard>
 
                 <ContainerCard containerTitle="ფილიალები" row="no-gutters">
+                    <Locations />
                 </ContainerCard>
 
                 <Footer />
