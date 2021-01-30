@@ -94,6 +94,28 @@ h1, h2, h3, h4, h5, h6{
     }
 }
 
+.swiper2 .swiper-slide, .myBtn {
+    width:auto;
+    height: auto;
+    font-family: geoBold;
+    line-height: normal;
+    font-size: 16px;
+    box-shadow: 0 0 12px -5px #000;
+    border-radius: 25px 25px;
+}
+ 
+.swiper1 .swiper-slide {
+    width: 100%;
+    text-align: center;
+    height: 40vh;
+    background-size: cover;
+    background-image: url("./images/swiper/1.jpg");
+}
+
+.myBtn{
+    background-color: white;
+    color: black;
+}
 
 .navspace{
     height: 100px;

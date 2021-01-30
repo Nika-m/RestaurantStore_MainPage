@@ -1,3 +1,5 @@
+const categories = ["ცომეული", "ბოსტნეული", "შმოსტნეული", "სალათები", "ქაბაბები", "მწვადები","ცომეული", "ბოსტნეული", "შმოსტნეული", "სალათები", "ქაბაბები", "მწვადები"]
+
 const locations = [
     {
         id:1,
@@ -35,4 +37,4 @@ const locations = [
 ]
 
 
-export {locations}
+export {locations,categories}

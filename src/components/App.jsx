@@ -1,10 +1,13 @@
 import React, {useEffect} from 'react';
 // import ReactDOM from 'react-dom';
 // import Navbar from "./Navbar.jsx";
+import Locations from "./Locations.jsx";
+import {categories} from "./data.js";
 import ContainerCard from './ContainerCard.jsx';
 import Footer from './footer.jsx';
+import Suggestions from './Suggestions';
+import Banner from './Banner';
 import Navbar from './Navbar.jsx';
-import Locations from "./Locations.jsx";
 import Swiper, { Navigation, Pagination } from 'swiper';
 
 // configure Swiper to use modules
@@ -14,6 +17,19 @@ Swiper.use([Navigation, Pagination]);
 
 function App(){
     useEffect(()=>{
+
+      var swiper1 = new Swiper('.swiper1');
+      
+        var swiper2 = new Swiper('.swiper2', {
+            slidesPerView: 'auto',
+            // centeredSlides: true,
+            spaceBetween: 40,
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+          });
+
         var swiper3 = new Swiper('.swiper3', {
             slidesPerView: 3,
             spaceBetween: 30,
@@ -49,8 +65,10 @@ function App(){
                 <Navbar/>
 
                 <div className="navspace"></div>
+                <Banner />
 
                 <ContainerCard containerTitle="კატეგორიები" color="white" row="no-gutters">
+                <Suggestions categories={categories}/>
                 </ContainerCard>
 
                 <ContainerCard containerTitle="რეკომენდირებული პროდუქტები" >
