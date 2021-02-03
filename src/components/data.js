@@ -1,3 +1,37 @@
+const products = [{
+    id: 1,
+    title:"ხინკალი ქალაქური",
+    amount:"10",
+    description:"",
+    price:"12.00",
+    image:"./images/products/1.jpg"
+},
+{
+    id: 2,
+    title:"ხინკალი მოხევური",
+    amount:"10",
+    description:"",
+    price:"13.00",
+    image:"./images/products/2.jpg"
+},
+{
+    id: 3,
+    title:"ხინკალი ყველით",
+    amount:"10",
+    description:"",
+    price:"13.00",
+    image:"./images/products/3.jpg"
+},
+{
+    id: 4,
+    title:"ხბოს მწვადი",
+    amount:"",
+    description:"კიტრი პომიდვრის სალათი ნიგვზით, ცეზარი ქათმით, ბადრიჯანი ნიგვზით, მჟავის ასორტი, ნადუღი სულგუნის ფირფიტებში, ყველი სულგუნი, შემწვარი ორაგული ბაჟეში, ხორცის ასორტი, წიწილა შემწვარი აჯიკით, ხბოს ჩაშუშული, კომბოსტოს ტოლმა, იმერული კუპატი, ხბოს მწვადი, ღორის მწვადი, კარტოფილი შემწვარი ტაფაზე, ხაჭაპური",
+    price:"19.00",
+    image:"./images/products/4.jpg"
+}
+];
+
 const images = [
     {
         id:1,
@@ -24,6 +58,7 @@ const images = [
         path:"./images/gallery/6.jpg"
     }
 ]
+
 const categories = ["ცომეული", "ბოსტნეული", "შმოსტნეული", "სალათები", "ქაბაბები", "მწვადები","ცომეული", "ბოსტნეული", "შმოსტნეული", "სალათები", "ქაბაბები", "მწვადები"]
 
 
@@ -63,5 +98,5 @@ const locations = [
 
 ]
 
-
+export default products;
 export {images, locations, categories}

@@ -42,7 +42,32 @@ h1, h2, h3, h4, h5, h6{
     
 }
 
-
+.productCard{
+    /*  >1200px unda iyos 3 sveti sadga col-9 shi chateuli tavisi dashorebebit
+        >992px unda iyos 3 sveti ogond dapataravebul zomebshi, navbar ic icvleba ogond 1100px ze
+        >768px unda iyos 2 sveti
+        >0px ze unda iyos 1 sveti 
+    */
+    background-color: white;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,.2);
+    }
+    .productCard div:nth-child(1){ /*.productCard .image */
+        width: 100%;
+        padding-top: 80%;
+        background-size : cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .productCard .info{
+        padding: 20px;
+        font-family: geoReg;
+    }
+    .productCard .title{
+        font-size: 1.2rem;
+    }
+    .productCard .price{
+        font-weight: 700;
+    }
 .plusButton{
     background-color: #e2ca6e;
     border-radius: 50%;

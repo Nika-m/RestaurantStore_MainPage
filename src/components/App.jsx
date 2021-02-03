@@ -1,9 +1,10 @@
 import React, {useEffect} from 'react';
 // import ReactDOM from 'react-dom';
 // import Navbar from "./Navbar.jsx";
+import ProductCard from "./ProductCard.jsx";
 import GalleryImage from "./GalleryImage.jsx";
 import Locations from "./Locations.jsx";
-import {images, categories} from "./data.js";
+import products, {images, categories} from "./data.js";
 import ContainerCard from './ContainerCard.jsx';
 import Footer from './footer.jsx';
 import Suggestions from './Suggestions';
@@ -13,6 +14,20 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 
 // configure Swiper to use modules
 Swiper.use([Navigation, Pagination]);
+
+function createProduct(productObj){
+  return (
+      <ProductCard
+          key={productObj.id}
+          title={productObj.title}
+          amount={productObj.amount}
+          description={productObj.description}
+          price={productObj.price}
+          image={productObj.image}
+      />
+  );
+}
+
 
 function createImages(imgObj){
   return(
@@ -81,6 +96,8 @@ function App(){
                 </ContainerCard>
 
                 <ContainerCard containerTitle="რეკომენდირებული პროდუქტები" >
+                {products.map(createProduct)}  
+                    {/* <button type="button" class="btn btn-secondary btn-lg mx-auto">ყველას ჩვენება</button>  */}
                 </ContainerCard>
 
                 <ContainerCard containerTitle="გალერეა">
