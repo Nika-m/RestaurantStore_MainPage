@@ -84,6 +84,17 @@ h1, h2, h3, h4, h5, h6{
     height: 30px;
 }
 
+@media (min-width: 0px){
+    .galleryImage{
+        width: 50%;
+    }
+}
+
+@media (min-width: 576px){
+    .galleryImage{
+        width: 50%;
+    }
+}
 
 @media (min-width: 992px){
     .footerInfo{
@@ -93,6 +104,7 @@ h1, h2, h3, h4, h5, h6{
         width: 33.333%;
     }
 }
+
 
 .swiper2 .swiper-slide, .myBtn {
     width:auto;

@@ -1,4 +1,31 @@
+const images = [
+    {
+        id:1,
+    path:"./images/gallery/1.jpg"
+    },
+    {
+        id:2,
+        path:"./images/gallery/2.jpg"
+    },
+    {
+        id:3,
+        path:"./images/gallery/3.jpg"
+    },
+    {
+        id:4,
+        path:"./images/gallery/4.jpg"
+    },
+    {
+        id:5,
+        path:"./images/gallery/5.jpg"
+    },
+    {
+        id:6,
+        path:"./images/gallery/6.jpg"
+    }
+]
 const categories = ["ცომეული", "ბოსტნეული", "შმოსტნეული", "სალათები", "ქაბაბები", "მწვადები","ცომეული", "ბოსტნეული", "შმოსტნეული", "სალათები", "ქაბაბები", "მწვადები"]
+
 
 const locations = [
     {
@@ -37,4 +64,4 @@ const locations = [
 ]
 
 
-export {locations,categories}
+export {images, locations, categories}

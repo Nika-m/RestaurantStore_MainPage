@@ -1,8 +1,9 @@
 import React, {useEffect} from 'react';
 // import ReactDOM from 'react-dom';
 // import Navbar from "./Navbar.jsx";
+import GalleryImage from "./GalleryImage.jsx";
 import Locations from "./Locations.jsx";
-import {categories} from "./data.js";
+import {images, categories} from "./data.js";
 import ContainerCard from './ContainerCard.jsx';
 import Footer from './footer.jsx';
 import Suggestions from './Suggestions';
@@ -13,6 +14,14 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 // configure Swiper to use modules
 Swiper.use([Navigation, Pagination]);
 
+function createImages(imgObj){
+  return(
+      <GalleryImage 
+          key={imgObj.id}
+          path = {imgObj.path}
+      />
+  )
+}
 
 
 function App(){
@@ -75,6 +84,7 @@ function App(){
                 </ContainerCard>
 
                 <ContainerCard containerTitle="გალერეა">
+                    {images.map(createImages)}
                 </ContainerCard>
 
                 <ContainerCard containerTitle="ფილიალები" row="no-gutters">
